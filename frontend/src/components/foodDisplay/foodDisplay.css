@@ -1,0 +1,12 @@
+.food-display{
+    margin-top: 30px;
+
+
+}
+.food-display-list{
+    display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(240px,1fr)); /* Creates three equal columns */
+  grid-template-rows: auto; /* Rows will adjust based on content */
+gap: 10px;
+}
+

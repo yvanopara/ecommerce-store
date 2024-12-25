@@ -8,7 +8,7 @@ import { StoreContext } from '../../context/StoreContext'
 
 export default function Login({setShowLoginPopup}) {
     const [currentState, setCurrentState] = useState('Login')
-    const {url,token,setToken} = useContext(StoreContext)
+    const {url,setToken} = useContext(StoreContext)
     const [data, setData] = useState({
         name: "",
         email: "",

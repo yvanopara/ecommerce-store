@@ -5,7 +5,7 @@ export const StoreContext = createContext(null);
 
 export default function StoreContextProvider(props) {
   const [cartItems, setCartItems] = useState({});
-  const url = 'https://render.com/docs/web-services#port-binding';
+  const url = 'http://localhost:5000';
   const [token, setToken] = useState('');
   const [food_list, setFood_list] = useState([]);
 

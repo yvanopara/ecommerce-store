@@ -4,6 +4,12 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import { connectDB } from "./config/db.js";
 import foodRouter from "./routes/foodRoute.js";
+import userRouter from "./routes/userRoot.js";
+import cartRouter from "./routes/cartRoute.js";
+import orderRouter from "./routes/orderRoute.js";
+
+
+// import orderRouter from "./routes/orderRoute.js";
 
 // Load environment variables from .env file
 dotenv.config();
@@ -22,7 +28,11 @@ connectDB(); // Connect to the database
 
 //api end point 
 app.use('/api/food',foodRouter)
-app.use('/images',express.static('uploads'))
+app.use("/images",express.static('uploads'))
+app.use('/api/user',userRouter)
+app.use('/api/cart',cartRouter)
+app.use('/api/order',orderRouter)
+
 
 app.listen(port, '0.0.0.0',() => {
 console.log(`Server started on http://localhost:${port}`);

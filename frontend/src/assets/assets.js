@@ -2,12 +2,12 @@ import basket_icon from './basket_icon.png'
 import logo from './logo.png'
 import header_img from './header_img.png'
 import search_icon from './search_icon.png'
-import menu_1 from './menu_1.png'
-import menu_2 from './menu_2.png'
-import menu_3 from './menu_3.png'
-import menu_4 from './menu_4.png'
+import bag1 from './bag1.jpg'
+import skin from './skin.jpg'
+import brume from './brume.jpg'
+import plus from './18.jpg'
 import menu_5 from './menu_5.png'
-import menu_6 from './menu_6.png'
+import menu_6 from './menu_6.png'  
 import menu_7 from './menu_7.png'
 import menu_8 from './menu_8.png'
 
@@ -84,24 +84,24 @@ export const assets = {
 
 export const menu_list = [
     {
-        menu_name: "Salad",
-        menu_image: menu_1
+        menu_name: "Women Bags",
+        menu_image: bag1
     },
     {
-        menu_name: "Rolls",
-        menu_image: menu_2
+        menu_name: "Skin Care",
+        menu_image: skin
     },
     {
-        menu_name: "Deserts",
-        menu_image: menu_3
+        menu_name: "Brumes",
+        menu_image: brume
     },
     {
         menu_name: "Sandwich",
-        menu_image: menu_4
+        menu_image: menu_5
     },
     {
-        menu_name: "Cake",
-        menu_image: menu_5
+        menu_name: "18+",
+        menu_image: plus
     },
     {
         menu_name: "Pure Veg",

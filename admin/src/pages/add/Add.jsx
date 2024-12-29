@@ -79,7 +79,7 @@ export default function Add({url}) {
               <option value="Women Bags">Women Bags</option>
               <option value="Skin Care">Skin Care</option>
               <option value="Brume">Brume</option>
-              <option value="Sandwich">Sandwich</option>
+              <option value="Plus">18+</option>
               <option value="Cake">Cake</option>
               <option value="Pure veg">Pure veg</option>
               <option value="Pasta">Pasta</option>

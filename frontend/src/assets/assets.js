@@ -1,6 +1,6 @@
 import basket_icon from './basket_icon.png'
 import logo from './logo.png'
-import header_img from './header_img.png'
+import header_img from './black_friday.jpg'
 import search_icon from './search_icon.png'
 import bag1 from './bag1.jpg'
 import skin from './skin.jpg'

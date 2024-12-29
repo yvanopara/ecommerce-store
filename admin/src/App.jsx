@@ -11,7 +11,7 @@ import List from './pages/list/List'
 
 
 export default function App() {
-  const url = 'http://localhost:5000'
+  const url = 'https://landry-store.onrender.com'
   return (
     <div className=''>
       <  ToastContainer />

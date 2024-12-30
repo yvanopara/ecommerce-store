@@ -11,7 +11,7 @@ export default function Add({url}) {
     name: "",
     price: "",
     description: "",
-    category: "salad",  // default value that appears on the page
+    category: "Brume",  // default value that appears on the page
     image: "", 
   })
   const onChangeHandler = (event) => {
@@ -80,7 +80,7 @@ export default function Add({url}) {
               <option value="Skin Care">Skin Care</option>
               <option value="Brume">Brume</option>
               <option value="Plus">18+</option>
-              <option value="Cake">Cake</option>
+              <option value="Shisha">shisha</option>
               <option value="Pure veg">Pure veg</option>
               <option value="Pasta">Pasta</option>
               <option value="Noodles">Noodles</option>

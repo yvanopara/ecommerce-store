@@ -2,11 +2,12 @@ import basket_icon from './basket_icon.png'
 import logo from './logo.png'
 import header_img from './black_friday.jpg'
 import search_icon from './search_icon.png'
+
 import bag1 from './bag1.jpg'
 import skin from './skin.jpg'
 import brume from './brume.jpg'
 import plus from './18.jpg'
-import menu_5 from './menu_5.png'
+import shisha from './shisha.jpg'
 import menu_6 from './menu_6.png'  
 import menu_7 from './menu_7.png'
 import menu_8 from './menu_8.png'
@@ -92,16 +93,16 @@ export const menu_list = [
         menu_image: skin
     },
     {
-        menu_name: "Brumes",
+        menu_name: "Brume",
         menu_image: brume
     },
+    
     {
-        menu_name: "Sandwich",
-        menu_image: menu_5
-    },
-    {
-        menu_name: "18+",
+        menu_name: "Plus",
         menu_image: plus
+    },{
+        menu_name: "Shisha",
+        menu_image: shisha
     },
     {
         menu_name: "Pure Veg",

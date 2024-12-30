@@ -2,12 +2,16 @@
     width: 100%;
     display: flex;
     position: relative;
+    background-color: red;
 
-    min-height: 450px;
-    background-image: url('../../assets/black_friday.jpg');
+    
+    background-image:  url('../../assets/black_friday.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
+
+    border-radius: 10px;
+     min-height: 450px
     
 }
 .header-contents{
@@ -61,3 +65,8 @@
     border-color: rgb(142, 188, 219);
 
 }
+@media (max-width: 750px) {
+    .header {
+      height: 35vh;
+
+    } }

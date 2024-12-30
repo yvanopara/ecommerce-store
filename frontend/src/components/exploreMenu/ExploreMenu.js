@@ -6,8 +6,8 @@ import {menu_list} from '../../assets/assets'
 export default function ExploreMenu({category, setCategory}) {
   return (
     <div className='explore-menu' id='explore-menu'>
-      <h1>Explore our menu</h1>
-      <p style={{fontSize:'20px', color:'black',paddingLeft:'0'}}>Welcome to Restaurant Name, where we dedicated to providing an unforgettable dining experience...</p>
+      <h1>Explorez notre menu</h1>
+      {/* <p style={{fontSize:'20px', color:'black',paddingLeft:'0'}}>Welcome to Restaurant Name, where we dedicated to providing an unforgettable dining experience...</p> */}
 
       <div className='explore-menu-list'>
        {menu_list.map((item,index)=>{
@@ -15,7 +15,7 @@ export default function ExploreMenu({category, setCategory}) {
             <div onClick={() =>setCategory(prev=>prev===item.menu_name?'':item.menu_name)} key={index} className='explore-menu-list-item'>
               {/* setCategory(prev => ...);  prev is a parameter that represents the current value of the category state at the time of the update.  */}
                 <img className={category===item.menu_name?'active':''} src={item.menu_image} alt=''/>
-                <p>{item.menu_name ||'empty'}</p>
+                <p >{item.menu_name ||'empty'}</p>
             </div>
 
         )

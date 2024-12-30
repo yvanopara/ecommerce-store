@@ -13,9 +13,14 @@
 .explore-menu h1,p{
     padding: 0;
     margin: 0;
-
-
-
+}
+.explore-menu h1{
+    color: tomato;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 42px;
+    margin-top: 15px;
+    
 }
 .explore-menu-list{
     display: flex;
@@ -47,7 +52,9 @@
     width: 10vw;
     min-width: 80px;
     border-radius: 50%;
-    color: rgb(69, 0, 133);
+    color: tomato;
+
+    font-weight: bold;
    text-align: center;
    font-weight: 500;
   
@@ -59,4 +66,16 @@
     border: 2px solid tomato;
     padding: 2px;
     
+}
+@media (max-width: 700px) {
+    
+    .explore-menu h1{
+        
+    
+       font-size: 30px;
+        
+    }
+    .explore-menu-list-item p{
+        font-size: 15.15px;
+    }
 }

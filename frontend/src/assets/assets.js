@@ -8,7 +8,7 @@ import skin from './skin.jpg'
 import brume from './brume.jpg'
 import plus from './18.jpg'
 import shisha from './shisha.jpg'
-import menu_6 from './menu_6.png'  
+import electronics from './arduino.jpg'  
 import menu_7 from './menu_7.png'
 import menu_8 from './menu_8.png'
 
@@ -105,8 +105,8 @@ export const menu_list = [
         menu_image: shisha
     },
     {
-        menu_name: "Pure Veg",
-        menu_image: menu_6
+        menu_name: "Electronics",
+        menu_image: electronics
     },
     {
         menu_name: "Pasta",

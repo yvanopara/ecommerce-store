@@ -18,7 +18,8 @@ export default function Navbar({setShowLoginPopup}) {
 
   return (
     <div className='navbar'>
-        <img src={assets.logo} className='logo'/>
+        {/* <img src={assets.logo} className='logo'/> */}
+        <p className='logoNamee'>K-MyStore</p>
         <ul className='navbar-menu'>
         <Link to='/'> <a onClick={()=>setMenu('home')} className={menu==='home'?'active':''}>home</a></Link>
         <Link to='/'><a onClick={()=>setMenu('menu')} className={menu==='menu'?'active':''}>menu</a></Link>
@@ -26,7 +27,7 @@ export default function Navbar({setShowLoginPopup}) {
             <a onClick={()=>setMenu('contact us')} className={menu==='contact us'?'active':''}>contact us</a>
         </ul>
             <div className='navbar-right'>
-                <img src={assets.search_icon} alt=''/>
+                {/* <img src={assets.search_icon} alt=''/> */}
                 <div className='assets-basket_icon'>
                     <Link to='/cart'><img src={assets.basket_icon} alt=''/></Link>
                     <div className={getTotalCartAmount() === 0?'':'dot' }></div>

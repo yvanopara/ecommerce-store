@@ -8,8 +8,9 @@ export default function Footer() {
         <div className='footer-content'>
             
             <div className='footer-content-left'>
-                <img src={assets.logo} alt=''/>
-                <p>fggrwreerew retwtweere tr  fgfdsfgdf fgfdgdfgfgdfg fgdfgdfgfd gfdg fd  gfsgsfdgs fsgdfgfd fsgfsgsgfd fsdgfsgsdf </p>
+                {/* <img src={assets.logo} alt=''/> */}
+                <h1 className='logoName'>K-MyStore</h1>
+                <p style={{marginTop:"-30px"}}>Contact Us Via Our Social Media</p>
                 <div className='footer-social-icon'>
                     <img src={assets.facebook_icon} alt=''/>
                     <img src={assets.twitter_icon} alt=''/>
@@ -34,7 +35,7 @@ export default function Footer() {
                 <h2>Get In Touch</h2>
                 <ul>
                     <li>237693800251</li>
-                    <li>yvanopara4000@gmail.com</li>
+                    <li>yvanlandry4000@gmail.com</li>
 
                 </ul>
                 
@@ -44,7 +45,7 @@ export default function Footer() {
         </div>
 
         <hr/>
-<p className='footer-copiright'>Copyright 2024 @ LandStore.com - All Right Reserve. </p>
+<p className='footer-copiright'>Copyright 2024 @ k-mystore.com - All Right Reserve. </p>
 
     </div>
   )

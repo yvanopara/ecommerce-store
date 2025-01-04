@@ -4,6 +4,14 @@
     justify-content: space-between;
     align-items: center;
 }
+
+
+.logoNamee {
+    color: tomato;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 .navbar-menu{
     list-style: none;
     display: flex;

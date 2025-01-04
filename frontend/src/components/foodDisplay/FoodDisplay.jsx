@@ -8,7 +8,7 @@ export default function FoodDisplay({ category }) {
 
     return ( 
         <div className='food-display' id='food-display'> 
-            <h2 className='header1'>VOS ACHATS AU MEILLEUR PRIX</h2> 
+            <p className='header1'>VOS ACHATS AU MEILLEUR PRIX</p> 
             <div className="food-display-list"> 
                 {food_list.map((item, index) => { 
                     if (category === 'All' || category === item.category) { 

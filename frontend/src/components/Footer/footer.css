@@ -4,7 +4,7 @@
     background-color: rgb(10, 42, 51);
     color: rgba(240, 248, 255, 0.562);
     align-items: center;
-    padding:80px 8vw ;
+    padding:20px 8vw ;
     min-height: 200px;
   
 }
@@ -50,6 +50,12 @@ cursor: pointer;
     height: 0.1px;
     background-color: rgba(255, 255, 255, 0);
     margin: 50px 0;
+}
+.logoName{
+    color: tomato;
+    font-size: 42px;
+    font-weight: 900;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
     
 @media (max-width: 750px){

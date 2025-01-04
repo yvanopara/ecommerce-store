@@ -11,7 +11,10 @@ gap: 10px;
 }
 
 .header1{
-  color: rgba(91, 76, 255, 0.788);
+  color: rgba(255, 99, 71, 0.753);
   font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 25px 0;
+  font-size: 20px;
+  font-weight: bold;
  
 }

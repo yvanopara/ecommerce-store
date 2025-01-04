@@ -6,7 +6,7 @@ import {menu_list} from '../../assets/assets'
 export default function ExploreMenu({category, setCategory}) {
   return (
     <div className='explore-menu' id='explore-menu'>
-      <h1>Explorez notre menu</h1>
+      <h1>Explorez Les Differentes Categories</h1>
       {/* <p style={{fontSize:'20px', color:'black',paddingLeft:'0'}}>Welcome to Restaurant Name, where we dedicated to providing an unforgettable dining experience...</p> */}
 
       <div className='explore-menu-list'>

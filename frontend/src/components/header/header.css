@@ -1,4 +1,134 @@
-.header{
+.header {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    
+}
+
+.header img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-position: center;
+    background-size: cover;
+    
+}
+.chev-right{
+    position: absolute;
+    top: 45%;
+    right: 2%;
+    background-color: rgba(255, 255, 255, 0.63);
+    border-radius: 50%;
+    width: 25px;
+    padding: 6px;
+    z-index: 1;
+    cursor: pointer;
+   
+ 
+}
+.chev-left{
+    position: absolute;
+    top: 45%;
+    background-color: rgba(255, 255, 255, 0.63);
+    border-radius: 50%;
+    left: 2%;
+    width: 25px;
+    padding: 6px;
+    z-index: 1;
+    cursor: pointer;
+
+}
+.dotIndicator {
+    display: flex;
+    justify-content: center;  /* Centers the children horizontally */
+    align-items: center;     /* Centers the children vertically (if needed) */
+    position: absolute;
+    bottom: 3%;             /* Adjust as necessary to position it vertically */
+    left: 50%;               /* Start centering relative to parent */
+    transform: translateX(-50%); /* Fully center horizontally */
+    z-index: 1;
+}
+
+.dotIndicator p {
+    color: rgb(255, 255, 255);
+    font-size: 80px ;
+
+
+   
+   
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .header{
     width: 100%;
     display: flex;
     position: relative;
@@ -69,4 +199,4 @@
     .header {
       height: 35vh;
 
-    } }
+    } } */

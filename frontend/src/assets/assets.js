@@ -61,6 +61,13 @@ import bag_icon from './bag_icon.png'
 import logout_icon from './logout_icon.png'
 import parcel_icon from './parcel_icon.png'
 
+import blackfriday from './carousel/black_friday.jpg'
+import vape from './carousel/carou-vape.jpg'
+import lubrifiant from './carousel/carou-lubrii.jpg'
+import glyco from'./carousel/carou-glico.jpg'
+import tvbox from './carousel/carou-tv.jpg'
+
+
 export const assets = {
     logo,
     basket_icon,
@@ -348,4 +355,8 @@ export const food_list = [
         description: "Food provides essential nutrients for overall health and well-being",
         category: "Noodles"
     }
+]
+export const Slides =[
+    blackfriday,vape,glyco, lubrifiant, tvbox
+
 ]

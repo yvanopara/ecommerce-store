@@ -1,0 +1,6 @@
+.slidesContainer{
+    width: clamp(340px, 60vw, 1500px);
+    height: 350px;
+    margin: 0 auto;
+  
+}

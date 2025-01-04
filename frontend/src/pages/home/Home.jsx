@@ -9,7 +9,11 @@ export default function Home() {
   return (
     
     <div>
+       
+      <div className='slidesContainer'>
         <Header/>
+      </div>
+        
         <ExploreMenu category={category} setCategory={setCategory}/>
         <FoodDisplay category={category} />
       

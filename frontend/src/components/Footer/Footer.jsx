@@ -1,6 +1,7 @@
 import React from 'react'
 import './footer.css' 
 import { assets } from '../../assets/assets'
+import '@fontsource/saira-stencil-one'; // This font has only one weight (400)
 
 export default function Footer() {
   return (

@@ -1,6 +1,6 @@
 .food-item{
     width: 100%;
-    margin: auto;
+    margin: 6px auto;
     box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.055);
     animation: fadeIn 2s;
     border-radius: 15px;
@@ -22,9 +22,10 @@
     margin-bottom: 10px;
 }
 .food-item-name-rating p{
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
-    color: rgba(0, 0, 0, 0.822);
+    color: rgba(7, 16, 97, 0.705);
+    font-family: 'Baloo Tammudu 2', cursive;
 
 }
 .food-item-name-rating img{
@@ -32,12 +33,14 @@
 }
 .food-item-desc{
     font-size: 15px;
-    color: rgb(96, 96, 102);
+    color: rgba(96, 96, 102, 0.808);
+    font-family: 'Mirza', cursive;
 }
 .food-item-price{
     font-size: 20px;
-    color:rgba(255, 99, 71, 0.822);
-    font-weight: 600;
+    font-family: 'Anton', sans-serif;
+    color:rgba(255, 99, 71, 0.733);
+    
     margin: 10px 0;
 }
 .food-item-img-container{

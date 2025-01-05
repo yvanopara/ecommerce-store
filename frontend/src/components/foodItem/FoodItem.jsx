@@ -2,6 +2,20 @@ import React, { useContext } from 'react'
 import './foodItem.css'
 import { assets } from '../../assets/assets'
 import { StoreContext } from '../../context/StoreContext';
+
+import '@fontsource/baloo-tammudu-2/700.css'; // Bold
+import '@fontsource/mohave/500.css'; // Light
+
+
+import '@fontsource/mirza/400.css'; // Medium
+import '@fontsource/anton'; // Anton has only one weight (400)
+
+
+
+
+
+
+
 export default function FoodItem({id,name,price,description,image}) {
 
 
@@ -34,7 +48,7 @@ export default function FoodItem({id,name,price,description,image}) {
             </div>
 
             <p  className='food-item-desc'>{description}</p>
-            <p  className='food-item-price'>{price}FCFA</p>
+            <p  className='food-item-price'>{price} FCFA</p>
 
         </div>
         

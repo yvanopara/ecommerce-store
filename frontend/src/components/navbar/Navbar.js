@@ -4,6 +4,11 @@ import { assets } from '../../assets/assets'
 import { Link, useNavigate } from 'react-router-dom'
 import { StoreContext } from '../../context/StoreContext'
 
+import '@fontsource/great-vibes'; // This font has only one weight (400)
+import '@fontsource/saira-stencil-one'; // This font has only one weight (400)
+
+
+
 export default function Navbar({setShowLoginPopup}) {
 
     const [menu, setMenu] = useState('menu')
@@ -19,7 +24,7 @@ export default function Navbar({setShowLoginPopup}) {
   return (
     <div className='navbar'>
         {/* <img src={assets.logo} className='logo'/> */}
-        <p className='logoNamee'>K-MyStore</p>
+        <p className='logoNamee'><span className='rotating-k'>K</span>-MyStore</p>
         <ul className='navbar-menu'>
         <Link to='/'> <a onClick={()=>setMenu('home')} className={menu==='home'?'active':''}>home</a></Link>
         <Link to='/'><a onClick={()=>setMenu('menu')} className={menu==='menu'?'active':''}>menu</a></Link>

@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100px;
+    
 
 } 
 .explore-menu hr{
@@ -14,12 +15,16 @@
     padding: 0;
     margin: 0;
 }
+
+
 .explore-menu h1{
-    color: rgba(255, 99, 71, 0.774);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(255, 99, 71, 0.705);
+    font-family: 'Rowdies', cursive;
     text-align: center;
-    font-size: 38px;
+    font-size: 22px;
     margin-top: 15px;
+
+    
     
 }
 .explore-menu-list{
@@ -27,10 +32,10 @@
     justify-content: space-between;
    
     gap: 25px;
-    margin: 20px 0;
+    margin: 2px 0;
     align-items: center;
 
-    height: 200px;
+    height: 160px;
     overflow-x: scroll;
    
 }
@@ -52,16 +57,14 @@
     width: 10vw;
     min-width: 80px;
     border-radius: 50%;
-    color: tomato;
-
+    color: rgba(255, 99, 71, 0.87);
+font-family: 'Signika Negative', sans-serif;
     font-weight: bold;
    text-align: center;
    font-weight: 500;
-  
-
-   
-   
 }
+
+
 .explore-menu-list-item .active{
     border: 2px solid tomato;
     padding: 2px;
@@ -72,7 +75,7 @@
     .explore-menu h1{
         
     
-       font-size: 30px;
+       font-size: 20px;
         
     }
     .explore-menu-list-item p{

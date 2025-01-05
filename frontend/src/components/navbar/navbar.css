@@ -9,8 +9,8 @@
 .logoNamee {
     color: tomato;
     font-size: 22px;
-    font-weight: 900;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    font-family: 'Saira Stencil One', sans-serif;
 }
 .navbar-menu{
     list-style: none;
@@ -148,8 +148,23 @@
 }
 .navbar-profile-dropdown img{
     width: 20px;
+    
+}
+.navbar-profile img{
+    border-radius: 50%;
+    width: 25px;
 }
 
+.rotating-k{
+    display: inline-block;
+    transform-origin: center; /* Keep rotation centered */
+    animation: rotate 2s linear infinite; /* Rotate continuously */
+    padding: 0 10px;
+    
+    border: 1px solid tomato;
+    
+    border-radius: 50%;
+}
 @media(max-width: 750px){
    
     .navbar-menu{

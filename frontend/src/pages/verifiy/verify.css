@@ -12,6 +12,11 @@
     border-radius: 50%;
     animation: rotate 0.8s infinite;
 }
+.tick{
+    place-self: center;
+}
+
+
 @keyframes rotate {
     100%{
         transform: rotate(360deg);

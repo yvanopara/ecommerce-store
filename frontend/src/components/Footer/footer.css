@@ -6,6 +6,7 @@
     align-items: center;
     padding:20px 8vw ;
     min-height: 200px;
+    margin-top: 20px;
   
 }
 .footer p{
@@ -54,8 +55,8 @@ cursor: pointer;
 .logoName{
     color: tomato;
     font-size: 42px;
-    font-weight: 900;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    font-family: 'Saira Stencil One', sans-serif;
 }
     
 @media (max-width: 750px){

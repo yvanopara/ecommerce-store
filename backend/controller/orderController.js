@@ -21,7 +21,7 @@ const placeOrder = async (req, res) => {
       await userModel.findByIdAndUpdate(req.body.userId, { cartData: {} });
 
       // Example: Redirect URL after successful order (this could be a payment session URL or confirmation page)
-      const session_url = `${frontedUrl}/verify?orderId=${newOrder._id}`;
+      const session_url = `/verify?orderId=${newOrder._id}`;
       console.log("Session URL:", session_url);
       // Respond with the session URL for redirection
       res.json({ success: true, session_url });

@@ -43,11 +43,15 @@
     margin: 15px 0;
     padding-top: 0px;
 
+
 }
+
+
 .cart-total-details {
     display: flex;
     justify-content: space-between;
     color: rgba(17, 13, 13, 0.308);
+   
 }
 .cart-total hr{
     margin: 10px 0;
@@ -119,4 +123,8 @@
     .cart-promocode{
         justify-content: start;
     }
+    .cart-items-title{
+        font-size: 3vw;
+    }
 }
+

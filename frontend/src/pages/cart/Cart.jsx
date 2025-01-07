@@ -12,12 +12,13 @@ export default function Cart() {
     <div className='cart'>
       <div className='cart-items'>
         <div className='cart-items-title'>
-          <p>Items</p>
-          <p>Title</p>
-          <p>Price</p>
-          <p>Quantity</p>
-          <p>Total</p>
-          <p>Remove</p>
+        <p>Articles</p>
+        <p>Titre</p>
+        <p>Prix</p>
+        <p>Quantité</p>
+        <p>Total</p>
+        <p>Supprimer</p>
+
         </div>
         <br />
         <hr />
@@ -49,20 +50,21 @@ export default function Cart() {
           <h2 style={{ margin: '0px', padding: '0px' }}>Cart Totals</h2>
           <div>
             <div className='cart-total-details'>
-              <p>Subtotal</p>
+              <p>Sous-total</p>
               <p>{getTotalCartAmount()} FCFA</p>
             </div>
             <div className='cart-total-details'>
-              <p>Delivery fees</p>
-              <p>{getTotalCartAmount() === 0 ? 0 : 2}</p>
+              <p>Frais de livraison</p>
+              <p>{getTotalCartAmount() === 0 ? 0 : 1000 +" FCFA"}</p>
             </div>
             <div className='cart-total-details'>
-              <b>Total</b>
-              <b>{getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2} FCFA</b>
+              
+              <p style={{marginTop:'15px',  fontWeight:'bold'}}>Total</p>
+              <b style={{marginTop:'15px', fontWeight:'bold'}}>{getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 1000} FCFA</b>
             </div>
             <hr />
           </div>
-          <button onClick={() => navigate('/order')}>PROCEED TO CHECKOUT</button>
+          <button onClick={() => navigate('/order')}>Passer à la caisse</button>
         </div>
         <div className='cart-promocode'>
           <p>If you have a promo code, enter it here</p>

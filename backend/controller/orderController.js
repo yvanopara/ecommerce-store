@@ -1,7 +1,9 @@
 import orderModel from "../models/orderModel.js";
 import userModel from "../models/userModel.js";
 
-const frontedUrl = "http://localhost:3000"; // This could be a payment session or confirmation page
+const frontedUrl = "/mr-lands-store.onrender.com/"; 
+
+// // This could be a payment session or confirmation page
 
 // Placing user order for front-end
 const placeOrder = async (req, res) => {
@@ -20,7 +22,7 @@ const placeOrder = async (req, res) => {
 
       // Example: Redirect URL after successful order (this could be a payment session URL or confirmation page)
       const session_url = `${frontedUrl}/verify?orderId=${newOrder._id}`;
-
+      console.log("Session URL:", session_url);
       // Respond with the session URL for redirection
       res.json({ success: true, session_url });
    } catch (error) {

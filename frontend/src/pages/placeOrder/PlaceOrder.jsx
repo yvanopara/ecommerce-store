@@ -34,17 +34,19 @@ export default function PlaceOrder() {
         let itemInfo = item;
         itemInfo["quantity"] = cartItems[item._id];
         orderItems.push(itemInfo);
+        
 
       }
     })
     let orderData = {
       address: data,
       items: orderItems,
-      amount: getTotalCartAmount(),
+      amount: getTotalCartAmount(), 
     }
-    let response = await axios.post(url+"/api/order/place", orderData,{headers:{token}})
+    let response = await axios.post("https://landry-store.onrender.com/api/order/place", orderData,{headers:{token}})
     if(response.data.success){
       const {session_url} = response.data;
+      console.log(response.data.session_url)
       window.location.replace(session_url);
     }
     else{ 
@@ -101,14 +103,14 @@ export default function PlaceOrder() {
             </div>
             <div className='cart-total-details'>
               <b>Total</b>
-              <b> {getTotalCartAmount() === 0 ? 0: getTotalCartAmount()+2}FCFA</b>
+              <b> {getTotalCartAmount() === 0 ? 0: getTotalCartAmount()+1000} FCFA</b>
 
             </div>
             <hr />
 
 
           </div>
-          <button type='submit'>PROCEED TO PAY</button>
+          <button type='submit'>PLACEZ VOTRE COMMANDE</button>
 
         </div>
 

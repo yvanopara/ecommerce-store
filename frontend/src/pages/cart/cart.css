@@ -8,17 +8,19 @@
 }
 .cart-items-title{
     display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+    grid-template-columns: 1.7fr 2fr 2.2fr 1.4fr 1.9fr 1.4fr;
     align-items: center;
     font-size: 1.2vw;
+
 
 }
 .cart-items-item{
     margin: 10px 0;
+    margin-left: -10px;
     color: black;
 }
 .cart-items-item img{
-    width: 55px;
+    width: 40px;
 }
 .cart-items hr{
     height: 1px;background-color: rgba(0, 0, 0, 0.37);

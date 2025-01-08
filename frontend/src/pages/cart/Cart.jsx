@@ -15,7 +15,8 @@ export default function Cart() {
         <p>Articles</p>
         <p>Titre</p>
         <p>Prix</p>
-        <p>Quantité</p>
+        <p>Quantiter{ }</p> 
+        
         <p>Total</p>
         <p>Supprimer</p>
 
@@ -30,9 +31,9 @@ export default function Cart() {
                 <div  key={item._id} className='cart-items-title cart-items-item'>
                   <img src={url + "/images/"+ item.image} alt='' />
                   <p>{item.name}</p>
-                  <p>{item.price} FCFA</p>
+                  <p>{item.price} </p>
                   <p>{cartItems[item._id]}</p>
-                  <p>{item.price * cartItems[item._id]} FCFA</p>
+                  <p>{item.price * cartItems[item._id]}</p>
                   <p className='cross' onClick={() => removeToCart(item._id)}>x</p>
                 </div>
               </div>

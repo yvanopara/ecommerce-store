@@ -12,13 +12,12 @@ export default function Cart() {
     <div className='cart'>
       <div className='cart-items'>
         <div className='cart-items-title'>
-        <p>Articles</p>
-        <p>Titre</p>
-        <p>Prix</p>
-        <p>Quantiter{ }</p> 
-        
-        <p>Total</p>
-        <p>Supprimer</p>
+        <p><strong>Articles</strong>&#160;&#160;&#160;</p>
+        <p><strong>Titre</strong></p>
+        <p><strong>Prix</strong></p>
+        <p><strong>Quantiter</strong>&#160;&#160;&#160;</p> 
+        <p><strong>Total</strong></p>
+        <p><strong>Supprimer</strong></p>
 
         </div>
         <br />
@@ -30,11 +29,11 @@ export default function Cart() {
               <div>
                 <div  key={item._id} className='cart-items-title cart-items-item'>
                   <img src={url + "/images/"+ item.image} alt='' />
-                  <p>{item.name}</p>
+                  <p>{item.name}&#160;&#160;&#160;</p>
                   <p>{item.price} </p>
                   <p>{cartItems[item._id]}</p>
                   <p>{item.price * cartItems[item._id]}</p>
-                  <p className='cross' onClick={() => removeToCart(item._id)}>x</p>
+                  <p className='cross' onClick={() => removeToCart(item._id)}><strong>x</strong></p>
                 </div>
               </div>
               );
@@ -65,7 +64,7 @@ export default function Cart() {
             </div>
             <hr />
           </div>
-          <button onClick={() => navigate('/order')}>Passer à la caisse</button>
+          <button style={{}} onClick={() => navigate('/order')}>Passer à la caisse</button>
         </div>
         <div className='cart-promocode'>
           <p>If you have a promo code, enter it here</p>

@@ -75,34 +75,34 @@ export default function PlaceOrder() {
       <div className='place-order-left'>
         <p className='title'>Delivery Information</p>
         <div className='multy-fields'>
-          <input required type='text' name="firstName" onChange={onChangeHandlert} value={data.firstName} placeholder='first-name' />
-          <input required type='text' name="lastName" onChange={onChangeHandlert} value={data.lastName} placeholder='last-name' />
+          <input required type='text' name="firstName" onChange={onChangeHandlert} value={data.firstName} placeholder='Nom' />
+          <input required type='text' name="lastName" onChange={onChangeHandlert} value={data.lastName} placeholder='Prenom' />
 
         </div>
-        <input required type='email' name="email" onChange={onChangeHandlert} value={data.email}  placeholder='Email address' />
-        <input required type='text' name="street" onChange={onChangeHandlert} value={data.street} placeholder='street' />
+        <input  type='email' name="email" onChange={onChangeHandlert} value={data.email}  placeholder='Email address' />
+        <input required type='text' name="street" onChange={onChangeHandlert} value={data.street} placeholder='Quartier' />
 
 
         <div className='multy-fields'>
-          <input  type='text' name="zipecode" onChange={onChangeHandlert} value={data.zipcode} placeholder='Zip code' />
-          <input required type='text' name="country" onChange={onChangeHandlert} value={data.country} placeholder='Country' />
+          
+          <input required type='text' name="country" onChange={onChangeHandlert} value={data.country} placeholder='Ville' />
         </div>
-        <input required type='text' name="phone" onChange={onChangeHandlert} value={data.phone} placeholder='Phone' />
+        <input required type='number' name="phone" onChange={onChangeHandlert} value={data.phone} placeholder='Numero de Telephone' />
       </div>
       <div className='place-order-right'>
         <div className='cart-total'>
           <h2 style={{ margin: '0px', padding: '0px' }}>Cart Totals</h2>
           <div >
             <div className='cart-total-details'>
-              <p>Subtotal</p>
-              <p>{getTotalCartAmount}FCFA</p>
+              <p>Sous total </p>
+              <p>{getTotalCartAmount()}</p>
             </div>
             <div className='cart-total-details'>
-              <p>Delivery fess</p>
-              <p>{getTotalCartAmount() === 0 ? 0:2}</p>
-            </div>
+              <p>Frais</p>
+              <p>{getTotalCartAmount() === 0 ? 0:1000}</p>
+            </div><br></br>
             <div className='cart-total-details'>
-              <b>Total</b>
+              <b>Total&#160;&#160;&#160;</b>
               <b> {getTotalCartAmount() === 0 ? 0: getTotalCartAmount()+1000} FCFA</b>
 
             </div>

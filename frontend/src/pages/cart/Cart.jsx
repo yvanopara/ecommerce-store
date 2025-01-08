@@ -2,10 +2,10 @@ import React, { useContext } from 'react';
 import './cart.css';
 import { useNavigate } from 'react-router-dom';
 import { StoreContext } from '../../context/StoreContext';
-import { food_list } from '../../assets/assets';
+// import { food_list } from '../../assets/assets';
 
 export default function Cart() {
-  const { cartItems, addToCart, removeToCart, getTotalCartAmount, url } = useContext(StoreContext);
+  const { cartItems, addToCart, removeToCart, getTotalCartAmount, url, food_list } = useContext(StoreContext);
   const navigate = useNavigate();
 
   return (

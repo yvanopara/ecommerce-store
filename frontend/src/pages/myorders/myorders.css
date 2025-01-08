@@ -33,9 +33,10 @@
     border: none;
     padding: 12px 0px;
     border-radius: 4px;
-    background-color: rgba(101, 77, 46, 0.829);
+    background-color: tomato;
     cursor: pointer;
-    color: rgba(221, 116, 221, 0.663);
+    color: rgb(255, 255, 255);
+    font-weight: 800;
 }
 .my-orders-order button:hover{
     font-size: 10px;

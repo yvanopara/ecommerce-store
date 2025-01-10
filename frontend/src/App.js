@@ -11,7 +11,7 @@ import Footer from './components/Footer/Footer'
 import Login from './components/logibPopup/Login'
 import Verify from './pages/verifiy/Verify'
 import MyOrders from './pages/myorders/MyOrders'
-import TawkToScript from './pages/tawk/tawk'
+
 
 
 
@@ -22,7 +22,7 @@ const App = () => {
     <>
     {showLogin?<Login setShowLoginPopup={setShowLoginPopup} />:<></>}
       <div className='App'>
-        <TawkToScript/>
+        
 
         <Navbar setShowLoginPopup={setShowLoginPopup} /> 
 

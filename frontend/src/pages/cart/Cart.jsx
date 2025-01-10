@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import './cart.css';
 import { useNavigate } from 'react-router-dom';
 import { StoreContext } from '../../context/StoreContext';
+
 // import { food_list } from '../../assets/assets';
 
 export default function Cart() {
@@ -27,6 +28,7 @@ export default function Cart() {
             if (cartItems[item._id] > 0) {
               return (
               <div>
+                
                 <div  key={item._id} className='cart-items-title cart-items-item'>
                   <img src={url + "/images/"+ item.image} alt='' />
                   <p>{item.name}&#160;&#160;&#160;</p>

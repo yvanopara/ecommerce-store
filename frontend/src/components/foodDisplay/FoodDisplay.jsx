@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import './foodDisplay.css';
 import { StoreContext } from '../../context/StoreContext';
 import FoodItem from '../foodItem/FoodItem';
@@ -9,7 +9,6 @@ import '@fontsource/rowdies/700.css'; // Light
 
 export default function FoodDisplay({ category }) {
     const { food_list } = useContext(StoreContext);
-    const [shuffledList, setShuffledList] = useState(food_list);
 
     // Function to shuffle an array
     const shuffleArray = (array) => {
@@ -22,21 +21,14 @@ export default function FoodDisplay({ category }) {
             });
     };
 
-    // Shuffle the list every 5 minute
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setShuffledList((prevList) => shuffleArray(prevList));
-        }, 300000);
-
-        // Cleanup interval on unmount
-        return () => clearInterval(interval);
-    }, [food_list]);
+    // Shuffle food list on each page load
+    const shuffledFoodList = shuffleArray(food_list);
 
     return (
         <div className='food-display' id='food-display'>
             <p className='header1'>VOS ACHATS AU MEILLEUR PRIX</p>
             <div className="food-display-list">
-                {shuffledList.map((item, index) => {
+                {shuffledFoodList.map((item) => {
                     if (category === 'All' || category === item.category) {
                         return (
                             <FoodItem

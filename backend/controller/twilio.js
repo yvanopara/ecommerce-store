@@ -1,16 +1,14 @@
 import twilio from 'twilio'; // Import Twilio library
 import dotenv from "dotenv";
 
-dotenv.config();
 
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = twilio(accountSid, authToken);
 const sendTwilioMessage = async (req, res) => {  // Renamed the function
-    const { message } = req.body;  // Extract message f
-ddfddfdfdf
-    // Twilio client initializationd
+    const { message } = req.body;  // Extract message from the body
+
 
     // Send the message via Twilio
     client.messages

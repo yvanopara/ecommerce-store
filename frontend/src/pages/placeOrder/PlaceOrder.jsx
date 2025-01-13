@@ -122,7 +122,7 @@ export default function PlaceOrder() {
 
 
           </div>
-          <button type='submit'>PLACEZ VOTRE COMMANDE</button>
+          <button type='submit'>PLACEZ VOTRE COMMANDE !</button>
 
         </div>
 

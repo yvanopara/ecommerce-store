@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 import { connectDB } from "./config/db.js";
 import foodRouter from "./routes/foodRoute.js";
 import userRouter from "./routes/userRoot.js";
-import cartRouter from "./routes/cartRoute.js";
+import cartRouter from "./routes/carteRoute.js";
 import orderRouter from "./routes/orderRoute.js";
 import bodyParser from 'body-parser';
 

@@ -35,6 +35,8 @@ export default function Verify() {
       {showSecondDiv &&
         <div className='tick'>
           <img src={assets.tick} />
+          {/* LAVIE */}
+          
         </div>}
     </div>
   );

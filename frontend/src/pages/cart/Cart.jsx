@@ -28,6 +28,7 @@ export default function Cart() {
             if (cartItems[item._id] > 0) {
               return (
               <div>
+                abitre
                 
                 <div  key={item._id} className='cart-items-title cart-items-item'>
                   <img src={url + "/images/"+ item.image} alt='' />

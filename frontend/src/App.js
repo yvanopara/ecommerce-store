@@ -22,8 +22,8 @@ const App = () => {
     <>
     {showLogin?<Login setShowLoginPopup={setShowLoginPopup} />:<></>}
       <div className='App' style={{backgroundColor:'black',height:"100vh"}}>
-      <p className='logoNameee' style={{paddingLeft:'20%',paddingTop:'17%', fontSize:'100px',}}><span className='rotating-k' >K</span>-MyStore</p>
-      <p className='logoNamee' style={{fontSize:'100px',color:"pink", textAlign:"center"}}>Maintenance en cours😃</p>
+      <p className='logoNameee' style={{paddingLeft:'20%',paddingTop:'30%', fontSize:'30px',}}><span className='rotating-k' >K</span>-MyStore</p>
+      <p className='logoNamee' style={{fontSize:'20px',color:"pink", textAlign:"center"}}>Maintenance en cours😃</p>
         
 {/* 
         <Navbar setShowLoginPopup={setShowLoginPopup} /> 

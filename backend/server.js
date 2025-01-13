@@ -10,9 +10,7 @@ import orderRouter from "./routes/orderRoute.js";
 import bodyParser from 'body-parser';
 
 
-
 import twilioRouter from "./routes/twilioRoute.js";
-env
 
 // import orderRouter from "./routes/orderRoute.js";
 
@@ -40,33 +38,8 @@ app.use('/api/order',orderRouter)
 app.use('/api/twilio',twilioRouter)
 
 
-
-
-
-
 // Middleware to parse JSON requests
 app.use(bodyParser.json());
-
-// Route to receive notifications
-app.post('/notify', (req, res) => {
-    const { message } = req.body;  // Extract message from the body
-
-    // Send the message via Twilio
-    client.messages
-        .create({
-            body: message,  // Message to send
-            from: 'whatsapp:+14155238886',  // Remplacez par votre numéro Twilio
-            to: 'whatsapp:+23793800251'     // Remplacez par le numéro du destinataire
-        })
-        .then(() => {
-            console.log('Notification envoyée avec succès!');
-            res.status(200).send('Notification envoyée.');
-        })
-        .catch((err) => {
-            console.error('Erreur lors de l\'envoi de la notification:', err);
-            res.status(500).send('Erreur lors de l\'envoi de la notification.');
-        });
-});
 
 
 

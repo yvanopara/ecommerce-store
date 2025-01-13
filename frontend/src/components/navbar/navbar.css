@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
 }
-
+rotating
 
 .logoNamee {
     color: tomato;
@@ -159,7 +159,7 @@
     display: inline-block;
     transform-origin: center; /* Keep rotation centered */
     animation: rotate 2s linear infinite; /* Rotate continuously */
-    padding: 0 10px;
+    padding: 0 45px;
     
     border: 1px solid tomato;
     

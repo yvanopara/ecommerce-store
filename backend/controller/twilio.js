@@ -8,9 +8,9 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = twilio(accountSid, authToken);
 const sendTwilioMessage = async (req, res) => {  // Renamed the function
-    const { message } = req.body;  // Extract message from the body
-
-    // Twilio client initialization
+    const { message } = req.body;  // Extract message f
+ddfddfdfdf
+    // Twilio client initializationd
 
     // Send the message via Twilio
     client.messages

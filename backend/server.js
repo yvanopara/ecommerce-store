@@ -81,13 +81,3 @@ app.get('/', (req, res) => {
     res.send('API IS WORKING');
 });
 
-
-
-
-
-
-
-
-
-// Account SID  AC32c217d92414d19ed0facb149f105262
-// Auth Token 523dfc48499f6997ccf7b8053d3c220b

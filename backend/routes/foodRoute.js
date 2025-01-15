@@ -6,7 +6,7 @@ import path from 'path';
 // Image storage engine configuration
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, path.join('/uploads')); // Store in the "uploads" folder
+        cb(null, path.join('uploads')); // Store in the "uploads" folder
     },
     filename: (req, file, cb) => {
         cb(null, `${Date.now()}${file.originalname}`);

@@ -77,3 +77,40 @@
     width: 94px;
 }
 
+.item-added-notification {
+    position: fixed;
+    top: 20px; /* Adjust the top position */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Initially hidden */
+    animation: fadeInOut 2s forwards; /* Apply the animation */
+  }
+  
+  /* Keyframes for fade-in and fade-out effect */
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(-20px); /* Starts from slightly above */
+    }
+    20% {
+      opacity: 1; /* Fully visible */
+      transform: translateX(-50%) translateY(0); /* Normal position */
+    }
+    80% {
+      opacity: 1; /* Stays fully visible */
+      transform: translateX(-50%) translateY(0); /* Stays in place */
+    }
+    100% {
+      opacity: 0; /* Fades out */
+      transform: translateX(-50%) translateY(20px); /* Moves down slightly */
+    }
+  }
+  
+  

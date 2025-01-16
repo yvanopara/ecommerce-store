@@ -90,7 +90,7 @@ export default function Add({url}) {
 
           <div className=''>
             <p>Product Price</p>
-            <input onChange={onChangeHandler} value={data.price} type="text" name="price" placeholder='500FCFA' />
+            <input onChange={onChangeHandler} value={data.price} type="number" name="price" placeholder='500FCFA' />
           </div>
         </div>
         <button type='submit' className='add-btn'>Add</button>

@@ -11,6 +11,7 @@ import Footer from './components/Footer/Footer'
 import Login from './components/logibPopup/Login'
 import Verify from './pages/verifiy/Verify'
 import MyOrders from './pages/myorders/MyOrders'
+import OrderSummary from './pages/orderSummary/OrderSummary'
 
 
 
@@ -36,6 +37,7 @@ const App = () => {
           <Route path='/order' element={<PlaceOrder />} />
           <Route path='/verify' element={<Verify />} />
           <Route path='/myorders' element={<MyOrders />} />
+          <Route path="/order-summary" element={<OrderSummary />} />
 
 
         </Routes>

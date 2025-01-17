@@ -4,7 +4,7 @@ import { StoreContext } from '../../context/StoreContext';
 import FoodItem from '../foodItem/FoodItem';
 
 // import '@fontsource/lilita-one'; // Defaults to weight 400
-import '@fontsource/rowdies/700.css'; // Light
+import '@fontsource/rowdies/700.css'; // Light  font-family: 
 // import '@fontsource/rowdies/400.css'; // Regular
 // import '@fontsource/rowdies/700.css'; // Bold
 

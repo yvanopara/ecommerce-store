@@ -1,0 +1,169 @@
+/* Order Summary Page Styling */
+.order-summary {
+  padding: 20px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+.order-summary .header{
+  font-family: 'Rowdies', cursive;
+  color: rgba(255, 99, 71, 0.836);
+  
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.order-item-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.order-item-info {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.order-item-info h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.order-item-info p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Quantity Adjustment Buttons */
+.quantity-adjust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.quantity-adjust button {
+  font-size: 24px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  width: 13vw;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reduce-btn {
+  background-color: #ff0000; /* Red for decrease button */
+  color: white;
+}
+
+.increase-btn {
+  background-color: #28a745; /* Green for increase button */
+  color: white;
+}
+
+.quantity-adjust button:hover {
+  opacity: 0.8;
+}
+
+/* Styling for the quantity display */
+.quantity {
+  margin: 0 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Button to Proceed to Checkout */
+.place-order-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.place-order-btn {
+  padding: 14px 30px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #ff8c00; /* Orange color */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.place-order-btn:hover {
+  background-color: #e77c00; /* Darker orange on hover */
+  transform: scale(1.05);
+}
+
+.place-order-btn:focus {
+  outline: none;
+}
+
+.order-item-info p {
+  font-size: 18px;
+  color: #555;
+}
+
+.order-item-info .name {
+  color: rgba(7, 16, 97, 0.705);
+  font-family: 'Baloo Tammudu 2', cursive;
+}
+
+
+.order-item-info .description {
+  font-family: 'Mirza', cursive;
+}
+
+
+/* New Styling for the Total Price */
+.order-item-info .total-price {
+  font-size: 22px; /* Bigger size */
+ 
+  color: rgba(255, 99, 71, 0.801); /* Tomato color */
+  margin-top: 15px; /* Adds space between description and total */
+  font-family: 'Anton', sans-serif;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .place-order-btn {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+
+  .quantity-adjust button {
+    font-size: 20px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .place-order-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .quantity-adjust button {
+    font-size: 18px;
+    padding: 6px 10px;
+  }
+}

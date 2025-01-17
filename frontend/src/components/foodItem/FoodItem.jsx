@@ -1,15 +1,18 @@
 import React, { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './foodItem.css';
 import { assets } from '../../assets/assets';
 import { StoreContext } from '../../context/StoreContext';
-import '@fontsource/baloo-tammudu-2/700.css'; // Bold
+
+import '@fontsource/baloo-tammudu-2/700.css'; // Bold 
 import '@fontsource/mohave/500.css'; // Light
-import '@fontsource/mirza/400.css'; // Medium
-import '@fontsource/anton'; // Anton has only one weight (400)
+import '@fontsource/mirza/400.css'; // Medium 
+import '@fontsource/anton'; // Anton has only one weight (400) font-family: 
 
 export default function FoodItem({ id, name, price, description, image }) {
   const { cartItems, addToCart, removeToCart, url } = useContext(StoreContext);
   const [showNotification, setShowNotification] = useState(false); // State for notification
+  const navigate = useNavigate();
 
   const handleAddToCart = (id) => {
     addToCart(id);
@@ -17,6 +20,11 @@ export default function FoodItem({ id, name, price, description, image }) {
     setTimeout(() => {
       setShowNotification(false); // Hide the notification after 2 seconds
     }, 2000);
+  };
+
+  const handleBuyNow = () => {
+    // Navigate to Order Summary page with the selected item data
+    navigate('/order-summary', { state: { id, name, price, description, image } });
   };
 
   return (
@@ -28,20 +36,29 @@ export default function FoodItem({ id, name, price, description, image }) {
         </div>
       )}
 
-      <div className="food-item-img-container">
-        <img className='food-item-image' src={url + '/images/' + image} alt='' />
+      <div className="food-item-img-container" onClick={handleBuyNow}>
+        <img className='food-item-image' src={url + '/images/' + image} alt={name} />
         {!cartItems[id] ? (
           <img
             className='add'
-            onClick={() => handleAddToCart(id)}
+            onClick={(e) => {
+              e.stopPropagation(); // Prevent triggering handleBuyNow
+              handleAddToCart(id);
+            }}
             src={assets.add_icon_white}
             alt=''
           />
         ) : (
           <div className='food-item-counter'>
-            <img onClick={() => removeToCart(id)} src={assets.remove_icon_red} alt="" />
+            <img onClick={(e) => {
+              e.stopPropagation(); // Prevent triggering handleBuyNow
+              removeToCart(id);
+            }} src={assets.remove_icon_red} alt="" />
             <p>{cartItems[id]}</p>
-            <img onClick={() => addToCart(id)} src={assets.add_icon_green} alt="" />
+            <img onClick={(e) => {
+              e.stopPropagation(); // Prevent triggering handleBuyNow
+              addToCart(id);
+            }} src={assets.add_icon_green} alt="" />
           </div>
         )}
       </div>

@@ -4,13 +4,13 @@ import header_img from './black_friday.jpg'
 import search_icon from './search_icon.png'
 
 import bag1 from './bag1.jpg'
-import skin from './skin.jpg'
+import fashion from './skin.jpg'
 import brume from './brume.jpg'
 import plus from './18.jpg'
 import shisha from './shisha.jpg'
-import electronics from './arduino.jpg'  
-import menu_7 from './menu_7.png'
-import menu_8 from './menu_8.png'
+import electronics from './electronic.jpg'  
+import informatique from './arduino.jpg'
+import other from './other.jpg'
 
 import food_1 from './food_1.png'
 import food_2 from './food_2.png'
@@ -94,36 +94,40 @@ export const assets = {
 
 export const menu_list = [
     {
+        menu_name: "Women Fassion",
+        menu_image: fashion
+    },
+    {
         menu_name: "Women Bags",
         menu_image: bag1
     },
-    {
-        menu_name: "Skin Care",
-        menu_image: skin
-    },
+   
     {
         menu_name: "Brume",
         menu_image: brume
-    },
-    
-    {
-        menu_name: "Plus",
-        menu_image: plus
-    },{
-        menu_name: "Shisha",
-        menu_image: shisha
     },
     {
         menu_name: "Electronics",
         menu_image: electronics
     },
+    
     {
-        menu_name: "Pasta",
-        menu_image: menu_7
+        menu_name: "Plus",
+        menu_image: plus
+    },
+   
+  
+    {
+        menu_name: "Shisha",
+        menu_image: shisha
     },
     {
-        menu_name: "Noodles",
-        menu_image: menu_8
+        menu_name: "Informatique",
+        menu_image: informatique
+    },
+    {
+        menu_name: "Others",
+        menu_image: other
     }]
 
 export const food_list = [

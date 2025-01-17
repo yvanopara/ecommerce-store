@@ -77,13 +77,13 @@ export default function Add({url}) {
           <p>Product Category</p>
             <select onChange={onChangeHandler} value={data.category} name="category" >
               <option value="Women Bags">Women Bags</option>
-              <option value="Skin Care">Skin Care</option>
+              <option value="Women Fassion">Women Fassion</option>
               <option value="Brume">Brume</option>
               <option value="Plus">18+</option>
               <option value="Shisha">shisha</option>
               <option value="Electronics">Electronics</option>
-              <option value="Pasta">Pasta</option>
-              <option value="Noodles">Noodles</option>
+              <option value="Informatique">Informatique</option>
+              <option value="Others">Others</option>
 
             </select>
           </div>

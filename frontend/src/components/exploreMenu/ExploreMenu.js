@@ -11,7 +11,7 @@ const Modal = ({ show, closeModal, togglePlusCategory }) => {
   return (
     <div className="modal-overlay" onClick={closeModal}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <h2>Espace réservé!! </h2>
+        <h2>Espace réservé! </h2>
         <p>Cette page est réservée uniquement aux Adultes. Veuillez fermer la page si vous êtes mineur</p>
         <button 
           className="left-button"

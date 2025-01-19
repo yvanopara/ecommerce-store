@@ -1,1 +1,1 @@
-# ecommerce-store
+git check-ignore

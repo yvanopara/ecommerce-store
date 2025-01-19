@@ -1,57 +1,52 @@
+/* General Styles for the Explore Menu */
 .explore-menu{
     display: flex;
     flex-direction: column;
     min-height: 100px;
-    
-    
+}
 
-} 
 .explore-menu hr{
     height: 2px;
     background-color: rgba(43, 8, 141, 0.322);
     margin: 12px 0;
     width: 100%;
 }
-.explore-menu h1,p{
+
+.explore-menu h1, p {
     padding: 0;
     margin: 0;
 }
 
-
-.explore-menu h1{
+.explore-menu h1 {
     color: rgba(255, 99, 71, 0.705);
     font-family: 'Rowdies', cursive;
     text-align: center;
     font-size: 22px;
     margin-top: 15px;
-
-    
-    
 }
+
 .explore-menu-list{
     display: flex;
     justify-content: space-between;
-   
     gap: 25px;
     margin: 10px 0 0 0;
     align-items: center;
     padding: 16px 5px;
-
     height: 160px;
     overflow-x: scroll;
-   
 }
+
 .explore-menu-list::-webkit-scrollbar{
     display: none;
 }
+
 .explore-menu-list-item img{
     cursor: pointer;
     width: 10vw;
     min-width: 80px;
     border-radius: 50%;
-
-   
 }
+
 .explore-menu-list-item p{
     cursor: pointer;
     margin-top: 5px;
@@ -60,27 +55,123 @@
     min-width: 80px;
     border-radius: 50%;
     color: rgba(255, 99, 71, 0.87);
-font-family: 'Signika Negative', sans-serif;
+    font-family: 'Signika Negative', sans-serif;
     font-weight: bold;
-   text-align: center;
-   font-weight: 500;
+    text-align: center;
 }
-
 
 .explore-menu-list-item .active{
     border: 2px solid tomato;
     padding: 2px;
-    
 }
-@media (max-width: 700px) {
-    
-    .explore-menu h1{
-        
-    
-       font-size: 20px;
-        
+
+/* Modal Overlay - Background */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Darkened background for better contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 10px;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow around modal */
+    max-width: 90%;
+    width: 350px; /* Ensures the modal doesn't stretch too wide */
+    padding: 25px;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out; /* Animation for smooth modal appearance */
+}
+
+/* Title Styling */
+.modal-content h2 {
+    font-size: 1.5rem;
+    color: #333333;
+    margin-bottom: 20px;
+    font-family: 'Rowdies', cursive;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+/* Paragraph Styling */
+.modal-content p {
+    font-size: 1rem;
+    color: #555555;
+    line-height: 1.5;
+    font-family: 'Signika Negative', sans-serif;
+    margin-bottom: 25px;
+}
+
+/* Button Styles */
+.modal-content button {
+    width: 48%; /* Ensure buttons are equally sized */
+    padding: 12px 0;
+    font-size: 1rem;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out, opacity 0.3s ease;
+}
+
+/* Left Button (Blue) */
+.modal-content button.left-button {
+    background-color: #007bff;
+    color: white;
+    margin-right: 4%; /* Space between the two buttons */
+}
+
+/* Right Button (Red) */
+.modal-content button.right-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Button Hover Effects */
+.modal-content button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px); /* Subtle lift on hover for better interactivity */
+}
+
+/* Animation for Modal Fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
     }
-    .explore-menu-list-item p{
-        font-size: 15.15px;
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 500px) {
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .modal-content p {
+        font-size: 0.9rem;
+    }
+
+    .modal-content button {
+        font-size: 0.9rem;
+        padding: 10px 0;
     }
 }

@@ -9,6 +9,17 @@ export default function StoreContextProvider(props) {
   const [token, setToken] = useState('');
   const [food_list, setFood_list] = useState([]);
 
+  // State for controlling "plus" category visibility
+  const [showPlusCategory, setShowPlusCategory] = useState(() => {
+    // Initialize from localStorage or default to false
+    return JSON.parse(localStorage.getItem('showPlusCategory')) || false;
+  });
+
+  // Persist state to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('showPlusCategory', JSON.stringify(showPlusCategory));
+  }, [showPlusCategory]);
+
   const addToCart = async (itemId) => {
     if (!cartItems[itemId]) {
       setCartItems((prev) => ({ ...prev, [itemId]: 1 }));
@@ -76,6 +87,9 @@ export default function StoreContextProvider(props) {
     url,
     token,
     setToken,
+    // Add showPlusCategory state and the function to toggle it
+    showPlusCategory,
+    setShowPlusCategory,
   };
 
   return (

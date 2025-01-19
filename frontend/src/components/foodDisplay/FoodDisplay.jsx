@@ -3,23 +3,25 @@ import './foodDisplay.css';
 import { StoreContext } from '../../context/StoreContext';
 import FoodItem from '../foodItem/FoodItem';
 
-// import '@fontsource/lilita-one'; // Defaults to weight 400
-import '@fontsource/rowdies/700.css'; // Light  font-family: 
-// import '@fontsource/rowdies/400.css'; // Regular
-// import '@fontsource/rowdies/700.css'; // Bold
-
 export default function FoodDisplay({ category }) {
-    const { food_list } = useContext(StoreContext);
+    const { food_list, showPlusCategory, setShowPlusCategory } = useContext(StoreContext);
 
     return (
         <div className='food-display' id='food-display'>
             <p className='header1'>VOS ACHATS AU MEILLEUR PRIX</p>
+            
+            {/* Button to toggle the 'Plus' category visibility */}
+           
+
             <div className="food-display-list">
                 {food_list.map((item) => {
-                    if (category === 'All' || category === item.category) {
+                    if (
+                        (category === 'All' || category === item.category) &&
+                        (item.category !== 'Plus' || showPlusCategory)
+                    ) {
                         return (
                             <FoodItem
-                                key={item._id} // Use unique key instead of index for better React performance
+                                key={item._id}
                                 id={item._id}
                                 name={item.name}
                                 description={item.description}
@@ -28,7 +30,7 @@ export default function FoodDisplay({ category }) {
                             />
                         );
                     }
-                    return null; // Return null for items that don't match
+                    return null;
                 })}
             </div>
         </div>

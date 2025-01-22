@@ -82,7 +82,7 @@ export default function Add({url}) {
               <option value="Plus">18+</option>
               <option value="Shisha">shisha</option>
               <option value="Electronics">Electronics</option>
-              <option value="Informatique">Informatique</option>
+              <option value="Skin Care">Skin Care</option>
               <option value="Others">Others</option>
 
             </select>

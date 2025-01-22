@@ -4,12 +4,12 @@ import header_img from './black_friday.jpg'
 import search_icon from './search_icon.png'
 
 import bag1 from './bag1.jpg'
-import fashion from './skin.jpg'
+import fashion from './women_fashion.jpg'
 import brume from './brume.jpg'
 import plus from './18.jpg'
 import shisha from './shisha.jpg'
 import electronics from './electronic.jpg'  
-import informatique from './arduino.jpg'
+import skin_care from './women_Beauty.jpg'
 import other from './other.jpg'
 
 import food_1 from './food_1.png'
@@ -122,8 +122,8 @@ export const menu_list = [
         menu_image: shisha
     },
     {
-        menu_name: "Informatique",
-        menu_image: informatique
+        menu_name: "Skin Care",
+        menu_image: skin_care
     },
     {
         menu_name: "Others",

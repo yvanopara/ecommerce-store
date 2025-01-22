@@ -156,7 +156,13 @@
 }
 
 /* Media Query for Responsive Design */
+@media (max-width: 768px) { /* For smaller devices */
+    .explore-menu-list-item p{
+      font-size: 14px;/* Adjusted size for smaller devices */
+    }
+  }
 @media (max-width: 500px) {
+  
     .modal-content {
         width: 90%;
         padding: 20px;

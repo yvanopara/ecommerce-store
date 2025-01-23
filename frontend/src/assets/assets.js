@@ -99,6 +99,10 @@ export const menu_list = [
         menu_image: fashion
     },
     {
+        menu_name: "Skin Care",
+        menu_image: skin_care
+    },
+    {
         menu_name: "Women Bags",
         menu_image: bag1
     },
@@ -122,10 +126,7 @@ export const menu_list = [
         menu_name: "Shisha",
         menu_image: shisha
     },
-    {
-        menu_name: "Skin Care",
-        menu_image: skin_care
-    },
+    
     {
         menu_name: "Others",
         menu_image: other

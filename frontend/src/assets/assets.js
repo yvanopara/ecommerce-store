@@ -3,13 +3,14 @@ import logo from './logo.png'
 import header_img from './black_friday.jpg'
 import search_icon from './search_icon.png'
 
+import skin_care from './women_Beauty.jpg'
 import bag1 from './bag1.jpg'
 import fashion from './women_fashion.jpg'
 import brume from './brume.jpg'
 import plus from './18.jpg'
 import shisha from './shisha.jpg'
 import electronics from './electronic.jpg'  
-import skin_care from './women_Beauty.jpg'
+
 import other from './other.jpg'
 
 import food_1 from './food_1.png'

@@ -5,3 +5,38 @@ body{
     width: 85%;
     margin: auto;
 }
+.marquee {
+    background-color: tomato;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .marquee p {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+    font-family: 'Arial', sans-serif; /* Police moderne */
+    animation: scroll 20s linear infinite, blink 3s ease-in-out infinite;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%); /* Départ complètement à droite */
+    }
+    100% {
+      transform: translateX(-100%); /* Arrivée complètement à gauche */
+    }
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8; /* Clignotement doux */
+    }
+  }
+  

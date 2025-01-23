@@ -1,52 +1,41 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-import './App.css'
-import Navbar from './components/navbar/Navbar'
+import './App.css';
+import Navbar from './components/navbar/Navbar';
 
-import { Route, Routes } from 'react-router-dom'
-import Home from './pages/home/Home'
-import Cart from './pages/cart/Cart'
-import PlaceOrder from './pages/placeOrder/PlaceOrder'
-import Footer from './components/Footer/Footer'
-import Login from './components/logibPopup/Login'
-import Verify from './pages/verifiy/Verify'
-import MyOrders from './pages/myorders/MyOrders'
-import OrderSummary from './pages/orderSummary/OrderSummary'
-
-
-
-
-
-
-
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/home/Home';
+import Cart from './pages/cart/Cart';
+import PlaceOrder from './pages/placeOrder/PlaceOrder';
+import Footer from './components/Footer/Footer';
+import Login from './components/logibPopup/Login';
+import Verify from './pages/verifiy/Verify';
+import MyOrders from './pages/myorders/MyOrders';
+import OrderSummary from './pages/orderSummary/OrderSummary';
 
 const App = () => {
   const [showLogin, setShowLoginPopup] = useState(false);
   return (
     <>
-    {showLogin?<Login setShowLoginPopup={setShowLoginPopup} />:<></>}
-      <div className='App' >
-      
+    <div className="marquee">
+          <p>🎉 Vous pouvez également choisir vos articles et passer votre commande sur notre WhatsApp officiel : 693800251 ! 🎉</p>
+        </div>
+      {showLogin ? <Login setShowLoginPopup={setShowLoginPopup} /> : <></>}
+      <div className="App">
+        <Navbar setShowLoginPopup={setShowLoginPopup} />
         
-
-        <Navbar setShowLoginPopup={setShowLoginPopup} /> 
-
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/order' element={<PlaceOrder />} />
-          <Route path='/verify' element={<Verify />} />
-          <Route path='/myorders' element={<MyOrders />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/order" element={<PlaceOrder />} />
+          <Route path="/verify" element={<Verify />} />
+          <Route path="/myorders" element={<MyOrders />} />
           <Route path="/order-summary" element={<OrderSummary />} />
-
-
         </Routes>
-
-
       </div>
-      <Footer/>
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

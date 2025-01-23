@@ -7,7 +7,7 @@ import axios from 'axios'
 import { StoreContext } from '../../context/StoreContext'
 
 export default function Login({setShowLoginPopup}) {
-    const [currentState, setCurrentState] = useState('Login')
+    const [currentState, setCurrentState] = useState('Se Connecter')
     const {url,setToken} = useContext(StoreContext)
     const [data, setData] = useState({
         name: "",
@@ -26,7 +26,7 @@ export default function Login({setShowLoginPopup}) {
     const onLogin = async (event) => {
         event.preventDefault();
         let newUrl = url;
-        if (currentState === 'Login') {
+        if (currentState === 'Se Connecter') {
             newUrl = url + '/api/user/login'
         
         }else{
@@ -55,23 +55,23 @@ export default function Login({setShowLoginPopup}) {
                 <img onClick={() => setShowLoginPopup(false)} src={assets.cross_icon} alt=''/>
             </div>
             <div className='login-popup-inputs'>
-                {currentState==='Login'?<></>: <input name='name' type='text' placeholder='name' onChange={onChangeHandler} value={data.name} required/>}
+                {currentState==='Se Connecter'?<></>: <input name='name' type='text' placeholder='Nom' onChange={onChangeHandler} value={data.name} required/>}
                 
-                <input name='email' type='text' placeholder='Your Email' onChange={onChangeHandler} value={data.email} required/>
-                <input name='password' type='text' placeholder='Password' onChange={onChangeHandler} value={data.password} required/>
+                <input name='email' type='text' placeholder='Email' onChange={onChangeHandler} value={data.email} required/>
+                <input name='password' type='text' placeholder='Mot de passe' onChange={onChangeHandler} value={data.password} required/>
 
             </div>
-            <button type='submit'>{currentState==='Sign Up'?'Create Account': 'Login'}</button>
+            <button type='submit'>{currentState==='Se Connecter'?'Se Connecter': 'Creez un Compte'}</button>
             <div className='login-popup-condition'>
                 <input type='checkbox' required/>
                 <p>I agree to the Terms & Conditions of <span>privacy policy</span></p>
             </div>
-            {currentState==='Login'
-            ?<p>Create a new account<span onClick={()=> setCurrentState('Sign Up')}>Click Here</span></p>
-            :<p>Already have an account?<span onClick={()=> setCurrentState('Login')}>Login Here</span></p>
+            {currentState==='Se Connecter'
+            ?<p>Vous navez pas de comptes? <span onClick={()=> setCurrentState('Creez un Compte')}>creez un compte</span></p>
+            :<p>Vous avez deja un compte? <span onClick={()=> setCurrentState('Se Connecter')}>Se Connecter</span></p>
             }
             
-            
+            Sign Up
         </form>     
     </div>
   )

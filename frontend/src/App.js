@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-
-import './App.css';
-import Navbar from './components/navbar/Navbar';
-import { Route, Routes } from 'react-router-dom';
-import Home from './pages/home/Home';
-import Cart from './pages/cart/Cart';
-import PlaceOrder from './pages/placeOrder/PlaceOrder';
-import Footer from './components/Footer/Footer';
-import Login from './components/logibPopup/Login';
-import Verify from './pages/verifiy/Verify';
-import MyOrders from './pages/myorders/MyOrders';
-import OrderSummary from './pages/orderSummary/OrderSummary';
+import React, { useState, useEffect } from "react";
+import axios from "axios"; // Assurez-vous qu'Axios est importé
+import "./App.css";
+import Navbar from "./components/navbar/Navbar";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/home/Home";
+import Cart from "./pages/cart/Cart";
+import PlaceOrder from "./pages/placeOrder/PlaceOrder";
+import Footer from "./components/Footer/Footer";
+import Login from "./components/logibPopup/Login";
+import Verify from "./pages/verifiy/Verify";
+import MyOrders from "./pages/myorders/MyOrders";
+import OrderSummary from "./pages/orderSummary/OrderSummary";
 
 const App = () => {
   const [showLogin, setShowLoginPopup] = useState(false);
@@ -24,10 +24,26 @@ const App = () => {
     }, 5000); // 5-second delay
   };
 
+  // Send notification when the site is visited
+  useEffect(() => {
+    const sendNotification = async () => {
+      try {
+        await axios.post("https://landry-store.onrender.com/api/twilio/notify", {
+          message: `Hello quelqu'un est en train de visiter votre site`,
+        });
+        console.log("Notification envoyée avec succès !");
+      } catch (error) {
+        console.error("Erreur lors de l'envoi de la notification :", error);
+      }
+    };
+
+    sendNotification(); // Appeler la fonction lors du montage du composant
+  }, []); // Le tableau vide signifie que l'effet se déclenche une seule fois au montage
+
   return (
     <>
       <div
-        className={`marquee ${isMarqueePaused ? 'paused' : ''}`}
+        className={`marquee ${isMarqueePaused ? "paused" : ""}`}
         onClick={handleMarqueeClick} // Attach the click event
       >
         <p>

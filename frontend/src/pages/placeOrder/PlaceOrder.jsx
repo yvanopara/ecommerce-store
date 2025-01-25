@@ -49,7 +49,7 @@ export default function PlaceOrder() {
 
       // Send a notification message via the backend
       await axios.post("https://landry-store.onrender.com/api/twilio/notify", {
-        message: `le client appeler *${data.firstName} ${data.lastName}* vient de passer un commade a valeur total de *${getTotalCartAmount()} FCFA* Numero de telephone ${data.phone}, quartier *${data.country}.* `,
+        message: `le client appeler *${data.firstName} ${data.lastName}* vient de passer un commade a valeur total de *${getTotalCartAmount()+1000} FCFA* Numero de telephone ${data.phone}, quartier: *${data.country}.* `,
       });
 
       console.log(response.data.session_url)

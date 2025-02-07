@@ -57,7 +57,7 @@ export default function Login({setShowLoginPopup}) {
             <div className='login-popup-inputs'>
                 {currentState==='Se Connecter'?<></>: <input name='name' type='text' placeholder='Nom' onChange={onChangeHandler} value={data.name} required/>}
                 
-                <input name='email' type='text' placeholder='Email' onChange={onChangeHandler} value={data.email} required/>
+                <input name='email' type='text' placeholder='Email ex: kmystore@gmail.com' onChange={onChangeHandler} value={data.email} required/>
                 <input name='password' type='text' placeholder='Mot de passe' onChange={onChangeHandler} value={data.password} required/>
 
             </div>
@@ -70,8 +70,7 @@ export default function Login({setShowLoginPopup}) {
             ?<p>Vous navez pas de comptes? <span onClick={()=> setCurrentState('Creez un Compte')}>creez un compte</span></p>
             :<p>Vous avez deja un compte? <span onClick={()=> setCurrentState('Se Connecter')}>Se Connecter</span></p>
             }
-            
-            Sign Up
+         
         </form>     
     </div>
   )

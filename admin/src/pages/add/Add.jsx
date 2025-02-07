@@ -34,7 +34,7 @@ export default function Add({url}) {
         name: "",
     price: "",
     description: "",
-    category: "Women Bags",  
+    category: "Saint valantin",  
     image: "",
       })
       setImage(false)
@@ -76,6 +76,7 @@ export default function Add({url}) {
           <div  className='add-category flex-col'>
           <p>Product Category</p>
             <select onChange={onChangeHandler} value={data.category} name="category" >
+            <option value="Saint Valantin">Saint Valantin</option>
               <option value="Women Bags">Women Bags</option>
               <option value="Women Fassion">Women Fassion</option>
               <option value="Brume">Brume</option>
@@ -84,6 +85,7 @@ export default function Add({url}) {
               <option value="Electronics">Electronics</option>
               <option value="Skin Care">Skin Care</option>
               <option value="Others">Others</option>
+              <option value="Informatique">Informatique</option>
 
             </select>
           </div>

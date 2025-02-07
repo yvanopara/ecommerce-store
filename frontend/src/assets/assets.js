@@ -3,13 +3,17 @@ import logo from './logo.png'
 import header_img from './black_friday.jpg'
 import search_icon from './search_icon.png'
 
+//menulist
 import skin_care from './women_Beauty.jpg'
 import bag1 from './bag1.jpg'
 import fashion from './women_fashion.jpg'
 import brume from './brume.jpg'
 import plus from './18.jpg'
 import shisha from './shisha.jpg'
-import electronics from './electronic.jpg'  
+import electronics from './electronic.jpg'
+import valantin from './valantin.jpg'
+import informatique from './arduino.jpg'
+
 
 import other from './other.jpg'
 
@@ -63,7 +67,7 @@ import bag_icon from './bag_icon.png'
 import logout_icon from './logout_icon.png'
 import parcel_icon from './parcel_icon.png'
 
-import blackfriday from './carousel/black_friday.jpg'
+import valantine from './carousel/valantin.jpg'
 import vape from './carousel/carou-vape.jpg'
 import lubrifiant from './carousel/carou-lubrii.jpg'
 import glyco from'./carousel/carou-glico.jpg'
@@ -94,6 +98,11 @@ export const assets = {
 }
 
 export const menu_list = [
+
+    {
+        menu_name: "Saint Valantin",
+        menu_image: valantin
+    },
     {
         menu_name: "Women Fassion",
         menu_image: fashion
@@ -106,6 +115,15 @@ export const menu_list = [
         menu_name: "Women Bags",
         menu_image: bag1
     },
+    {
+        menu_name: "Plus",
+        menu_image: plus
+    },
+    {
+        menu_name: "Informatique",
+        menu_image: informatique
+    },
+   
    
     {
         menu_name: "Brume",
@@ -116,11 +134,7 @@ export const menu_list = [
         menu_image: electronics
     },
     
-    {
-        menu_name: "Plus",
-        menu_image: plus
-    },
-   
+    
   
     {
         menu_name: "Shisha",
@@ -365,6 +379,6 @@ export const food_list = [
     }
 ]
 export const Slides =[
-    blackfriday,vape,glyco, lubrifiant, tvbox
+    valantine,vape,glyco, lubrifiant, tvbox
 
 ]

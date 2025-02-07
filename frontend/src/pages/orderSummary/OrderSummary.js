@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { StoreContext } from '../../context/StoreContext';
 import './orderSummary.css';
@@ -6,30 +6,32 @@ import './orderSummary.css';
 import '@fontsource/anton'; // Anton has only one weight (400)
 import '@fontsource/mirza/400.css'; // Medium 
 import '@fontsource/baloo-tammudu-2/700.css'; // Bold
-
 import '@fontsource/rowdies/700.css'; // Light  
+
 export default function OrderSummary() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { url, cartItems, addToCart, removeToCart } = useContext(StoreContext); // Extract cart functions
-
+  const { url, cartItems, addToCart, removeToCart } = useContext(StoreContext);
   const { id, name, price, description, image } = location.state || {};
-  const [quantity, setQuantity] = useState(cartItems[id] || 0); // Manage the quantity locally
+  const [quantity, setQuantity] = useState(cartItems[id] || 0);
 
-  // Update quantity when buttons are clicked
+  // Ensure the page starts at the top on load
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleIncreaseQuantity = () => {
     setQuantity(quantity + 1);
-    addToCart(id); // Add one more item to the cart
+    addToCart(id);
   };
 
   const handleDecreaseQuantity = () => {
     if (quantity > 0) {
       setQuantity(quantity - 1);
-      removeToCart(id); // Remove one item from the cart
+      removeToCart(id);
     }
   };
 
-  // Navigate to the PlaceOrder page
   const handlePlaceOrder = () => {
     navigate('/order');
   };
@@ -40,36 +42,24 @@ export default function OrderSummary() {
       {id ? (
         <div className="order-items">
           <div key={id} className="order-item">
-            <img
-              src={`${url}/images/${image}`}
-              alt={name}
-              className="order-item-image"
-            />
-           <div className="order-item-info">
-            <h3 className='name'>{name}</h3>
-            <p className='description'>{description}</p>
-            <p className="total-price">Total: {price * quantity} FCFA</p> {/* Added class for styling the total */}
-          </div>
-
+            <img src={`${url}/images/${image}`} alt={name} className="order-item-image" />
+            <div className="order-item-info">
+              <h3 className='name'>{name}</h3>
+              <p className='description'>{description}</p>
+              <p className="total-price">Total: {price * quantity} FCFA</p>
+            </div>
             <div className="quantity-adjust">
-            <button className="reduce-btn" onClick={handleDecreaseQuantity}>-</button>
-            <span className="quantity">{quantity}</span>
-            <button className="increase-btn" onClick={handleIncreaseQuantity}>+</button>
+              <button className="reduce-btn" onClick={handleDecreaseQuantity}>-</button>
+              <span className="quantity">{quantity}</span>
+              <button className="increase-btn" onClick={handleIncreaseQuantity}>+</button>
+            </div>
           </div>
-          
-          </div>
-          {/* Quantity Adjust Buttons */}
-          
         </div>
       ) : (
         <p>No product selected</p>
       )}
-
-      {/* Button to navigate to PlaceOrder page */}
       <div className="place-order-btn-container">
-        <button className="place-order-btn" onClick={handlePlaceOrder}>
-        Passer à la caisse
-        </button>
+        <button className="place-order-btn" onClick={handlePlaceOrder}>Passer à la caisse</button>
       </div>
     </div>
   );

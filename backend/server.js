@@ -21,7 +21,8 @@ app.use(express.json()); // Parse incoming requests with JSON payloads
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded data
 app.use(cors());
 
-// Connect to the database
+
+// Connect to the database pour testé mon serveurr
 connectDB();
 
 // API endpoints

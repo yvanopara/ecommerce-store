@@ -1,0 +1,29 @@
+.google {
+    width: 100%;
+    
+}
+.google button{
+    background-color: transparent;
+    border: 0.5px solid;
+    border-color: tomato;
+    color: black;
+    width: 100%;
+   
+    
+}
+
+.google:hover {
+  background: linear-gradient(to right, #6a0dad, #ff69b4, #9370db);
+  
+  border: none;
+
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.9;
+  transform: scale(1.05);
+
+ 
+  }

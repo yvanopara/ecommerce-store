@@ -5,6 +5,7 @@ import { useEffect } from 'react'
 import { useContext } from 'react'
 import axios from 'axios'
 import { StoreContext } from '../../context/StoreContext'
+import OAuth from '../google/OAuth'
 
 export default function Login({setShowLoginPopup}) {
     const [currentState, setCurrentState] = useState('Se Connecter')
@@ -62,7 +63,9 @@ export default function Login({setShowLoginPopup}) {
 
             </div>
             <button type='submit'>{currentState==='Se Connecter'?'Se Connecter': 'Creez un Compte'}</button>
-            <div className='login-popup-condition'>
+            <OAuth/>
+            
+            <div className='login-popup-condition'> 
                 <input type='checkbox' required/>
                 <p>I agree to the Terms & Conditions of <span>privacy policy</span></p>
             </div>

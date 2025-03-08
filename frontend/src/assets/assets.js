@@ -11,7 +11,7 @@ import brume from './brume.jpg'
 import plus from './18.jpg'
 import shisha from './shisha.jpg'
 import electronics from './electronic.jpg'
-import valantin from './valantin.jpg'
+import children from './enfants.jpeg'
 import informatique from './arduino.jpg'
 
 
@@ -67,10 +67,13 @@ import bag_icon from './bag_icon.png'
 import logout_icon from './logout_icon.png'
 import parcel_icon from './parcel_icon.png'
 
-import valantine from './carousel/valantin.jpg'
+
+import morelle from './carousel/morelle.jpg'
+import women2  from './carousel/women2.jpg'
+
 import vape from './carousel/carou-vape.jpg'
 import lubrifiant from './carousel/carou-lubrii.jpg'
-import glyco from'./carousel/carou-glico.jpg'
+import glyco from'./carousel/skin2.jpg'
 import tvbox from './carousel/carou-tv.jpg'
 
 
@@ -100,8 +103,8 @@ export const assets = {
 export const menu_list = [
 
     {
-        menu_name: "Saint Valantin",
-        menu_image: valantin
+        menu_name: "Children's Accessories",
+        menu_image: children
     },
     {
         menu_name: "Women Fassion",
@@ -379,6 +382,6 @@ export const food_list = [
     }
 ]
 export const Slides =[
-    valantine,vape,glyco, lubrifiant, tvbox
+    women2,morelle,vape,glyco, lubrifiant, tvbox,  
 
 ]

@@ -18,6 +18,7 @@ export default function Navbar({setShowLoginPopup}) {
         setToken('')
         localStorage.removeItem('token')
         navigate('/')
+       
 
     }
 
@@ -38,7 +39,7 @@ export default function Navbar({setShowLoginPopup}) {
                     <div className={getTotalCartAmount() === 0?'':'dot' }></div>
                 </div>
                 {!token ? (
-          <button onClick={() => setShowLoginPopup(true)} aria-label="Sign in">sign in</button>
+          <button onClick={() => setShowLoginPopup(true)} aria-label="Sign in">se connecter</button>
         ) : (
           <div className='navbar-profile'>
             <img src={assets.profile_icon} alt="Profile icon" />
